@@ -1,0 +1,25 @@
+.WY_iframe {
+    border: none;
+    margin: -15px;
+    display: block;
+    width: 600px;
+    height: 450px;
+}
+.WY_link {
+    position: relative;
+    display: inline-block;
+    background: url('play-h.png') center center no-repeat;
+}
+.WY_link:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('play.png') center center no-repeat;
+}
+.WY_link:hover:after {
+    background-image: url('play-h.png');
+}
