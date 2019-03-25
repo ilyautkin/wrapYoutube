@@ -2,6 +2,14 @@
 /** @var modX $modx */
 switch ($modx->event->name) {
     case 'OnWebPagePrerender':
+        $excluded = $modx->getOption('wrapyoutube_excluded_templates', null, '');
+        if ($excluded !== '') {
+            $template = $modx->resource->template;
+            $tmpl_arr = explode(',', $excluded);
+            if (in_array($template, $tmpl_arr)) {
+                return;
+            }
+        }
         $tpl = $modx->getOption('wrapyoutube_tpl', null, 'tpl.wrapYoutube');
         if (!$modx->getObject('modChunk', array('name' => $tpl))) {
             return;

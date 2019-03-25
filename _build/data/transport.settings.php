@@ -20,6 +20,11 @@ $tmp = array(
         'value' => '[[++assets_url]]components/wrapyoutube/js/web/default.js',
         'area' => 'wrapyoutube_main',
     ),
+    'excluded_templates' => array(
+        'xtype' => 'textfield',
+        'value' => '',
+        'area' => 'wrapyoutube_main',
+    ),
 );
 
 foreach ($tmp as $k => $v) {
