@@ -14,7 +14,9 @@ switch ($modx->event->name) {
         if (!$modx->getObject('modChunk', array('name' => $tpl))) {
             return;
         }
-        require_once $modx->getOption('core_path') . 'components/wrapyoutube/lib/simple_html_dom.php';
+        if (!class_exists('simple_html_dom')) {
+            require_once $modx->getOption('core_path') . 'components/wrapyoutube/lib/simple_html_dom.php';
+        }
         $html= new simple_html_dom();
         $html->load($modx->resource->_output, false, false, DEFAULT_BR_TEXT);
         

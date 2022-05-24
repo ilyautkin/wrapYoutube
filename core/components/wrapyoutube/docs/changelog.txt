@@ -1,5 +1,9 @@
 Changelog for wrapYoutube.
 
+1.0.3-beta
+==============
+- Add checking existing of class `simple_html_dom`
+
 1.0.2-beta
 ==============
 - simple_html_dom-1.9.1
